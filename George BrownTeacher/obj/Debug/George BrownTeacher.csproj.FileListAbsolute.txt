@@ -1,0 +1,16 @@
+C:\Users\igorr\OneDrive\Documents\Lasalle\Fall 2023\Multi tier application\Final project\George BrownTeacher\George BrownTeacher\bin\Debug\George BrownTeacher.exe.config
+C:\Users\igorr\OneDrive\Documents\Lasalle\Fall 2023\Multi tier application\Final project\George BrownTeacher\George BrownTeacher\bin\Debug\George BrownTeacher.exe
+C:\Users\igorr\OneDrive\Documents\Lasalle\Fall 2023\Multi tier application\Final project\George BrownTeacher\George BrownTeacher\bin\Debug\George BrownTeacher.pdb
+C:\Users\igorr\OneDrive\Documents\Lasalle\Fall 2023\Multi tier application\Final project\George BrownTeacher\George BrownTeacher\bin\Debug\EntityFramework.dll
+C:\Users\igorr\OneDrive\Documents\Lasalle\Fall 2023\Multi tier application\Final project\George BrownTeacher\George BrownTeacher\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\igorr\OneDrive\Documents\Lasalle\Fall 2023\Multi tier application\Final project\George BrownTeacher\George BrownTeacher\bin\Debug\EntityFramework.xml
+C:\Users\igorr\OneDrive\Documents\Lasalle\Fall 2023\Multi tier application\Final project\George BrownTeacher\George BrownTeacher\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\igorr\OneDrive\Documents\Lasalle\Fall 2023\Multi tier application\Final project\George BrownTeacher\George BrownTeacher\obj\Debug\George BrownTeacher.csproj.AssemblyReference.cache
+C:\Users\igorr\OneDrive\Documents\Lasalle\Fall 2023\Multi tier application\Final project\George BrownTeacher\George BrownTeacher\obj\Debug\George_BrownTeacher.Form1.resources
+C:\Users\igorr\OneDrive\Documents\Lasalle\Fall 2023\Multi tier application\Final project\George BrownTeacher\George BrownTeacher\obj\Debug\George_BrownTeacher.GUI.Form2.resources
+C:\Users\igorr\OneDrive\Documents\Lasalle\Fall 2023\Multi tier application\Final project\George BrownTeacher\George BrownTeacher\obj\Debug\George_BrownTeacher.Properties.Resources.resources
+C:\Users\igorr\OneDrive\Documents\Lasalle\Fall 2023\Multi tier application\Final project\George BrownTeacher\George BrownTeacher\obj\Debug\George BrownTeacher.csproj.GenerateResource.cache
+C:\Users\igorr\OneDrive\Documents\Lasalle\Fall 2023\Multi tier application\Final project\George BrownTeacher\George BrownTeacher\obj\Debug\George BrownTeacher.csproj.CoreCompileInputs.cache
+C:\Users\igorr\OneDrive\Documents\Lasalle\Fall 2023\Multi tier application\Final project\George BrownTeacher\George BrownTeacher\obj\Debug\George BrownTeacher.csproj.CopyComplete
+C:\Users\igorr\OneDrive\Documents\Lasalle\Fall 2023\Multi tier application\Final project\George BrownTeacher\George BrownTeacher\obj\Debug\George BrownTeacher.exe
+C:\Users\igorr\OneDrive\Documents\Lasalle\Fall 2023\Multi tier application\Final project\George BrownTeacher\George BrownTeacher\obj\Debug\George BrownTeacher.pdb

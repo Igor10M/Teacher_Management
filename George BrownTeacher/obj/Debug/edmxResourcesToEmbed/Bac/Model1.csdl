@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TeacherCourseDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Cours">
+    <Key>
+      <PropertyRef Name="CourseNumber" />
+    </Key>
+    <Property Name="CourseNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CourseTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Credits" Type="Int32" />
+    <NavigationProperty Name="TeacherCourses" Relationship="Self.FK__TeacherCo__Cours__3F466844" FromRole="Courses" ToRole="TeacherCourses" />
+  </EntityType>
+  <EntityType Name="TeacherCours">
+    <Key>
+      <PropertyRef Name="RegistrationId" />
+    </Key>
+    <Property Name="RegistrationId" Type="Int32" Nullable="false" />
+    <Property Name="TeacherId" Type="Int32" />
+    <Property Name="CourseNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Cours" Relationship="Self.FK__TeacherCo__Cours__3F466844" FromRole="TeacherCourses" ToRole="Courses" />
+    <NavigationProperty Name="Teacher" Relationship="Self.FK__TeacherCo__Teach__3E52440B" FromRole="TeacherCourses" ToRole="Teachers" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="TeacherId" />
+    </Key>
+    <Property Name="TeacherId" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TeacherCourses" Relationship="Self.FK__TeacherCo__Teach__3E52440B" FromRole="Teachers" ToRole="TeacherCourses" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Users__UserID__398D8EEE" FromRole="Teachers" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="JobTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Teacher" Relationship="Self.FK__Users__UserID__398D8EEE" FromRole="Users" ToRole="Teachers" />
+  </EntityType>
+  <Association Name="FK__TeacherCo__Cours__3F466844">
+    <End Role="Courses" Type="Self.Cours" Multiplicity="0..1" />
+    <End Role="TeacherCourses" Type="Self.TeacherCours" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Courses">
+        <PropertyRef Name="CourseNumber" />
+      </Principal>
+      <Dependent Role="TeacherCourses">
+        <PropertyRef Name="CourseNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TeacherCo__Teach__3E52440B">
+    <End Role="Teachers" Type="Self.Teacher" Multiplicity="0..1" />
+    <End Role="TeacherCourses" Type="Self.TeacherCours" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teachers">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="TeacherCourses">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Users__UserID__398D8EEE">
+    <End Role="Teachers" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Teachers">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TeacherCourseDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Courses" EntityType="Self.Cours" />
+    <EntitySet Name="TeacherCourses" EntityType="Self.TeacherCours" />
+    <EntitySet Name="Teachers" EntityType="Self.Teacher" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK__TeacherCo__Cours__3F466844" Association="Self.FK__TeacherCo__Cours__3F466844">
+      <End Role="Courses" EntitySet="Courses" />
+      <End Role="TeacherCourses" EntitySet="TeacherCourses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TeacherCo__Teach__3E52440B" Association="Self.FK__TeacherCo__Teach__3E52440B">
+      <End Role="Teachers" EntitySet="Teachers" />
+      <End Role="TeacherCourses" EntitySet="TeacherCourses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Users__UserID__398D8EEE" Association="Self.FK__Users__UserID__398D8EEE">
+      <End Role="Teachers" EntitySet="Teachers" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
